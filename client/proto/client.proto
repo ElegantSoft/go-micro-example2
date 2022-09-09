@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package client;
+
+option go_package = "./proto;client";
+
+service Client {
+  rpc Call(Empty) returns (UsernameResponse);
+}
+
+message UsernameResponse {
+  string username = 1;
+}
+
+message Empty {}
